@@ -201,7 +201,7 @@ function isInteger(x) { return Math.round(x) === x; }
 
 > `#algorithm`
 
-💡 Deal with it
+💡 Check word == reversed_word
 ```js
 function isPalindrome(str) {
     // trim non word and make it lower case
@@ -216,14 +216,14 @@ console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
 
 - - -
 
-💬 **Write a `sum` method which will work properly when invoked using either syntax below.
+💬 **Write a `sum` method which will work properly when invoked using either syntax below.**
 ```js
 console.log(sum(2,3));   // Outputs 5
 console.log(sum(2)(3));  // Outputs 5
 ```
 > `#algorithm` `#arguments` `#functional`
 
-💡 Deal with it
+💡 Use functional programming
 ```js
 function sum(x) {
   if (arguments.length == 2) {
@@ -243,7 +243,36 @@ function sum(x, y) {
   }
 }
 ```
+💬 **Consider the following code snippet:**
+```js
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+```
+(a) What gets logged to the console when the user clicks on “Button 4” and why?
+(b) Provide one or more alternate implementations that will work as expected.
 
+> `#closure` `#scope`
+
+💡 `i` is `5` forever, need input i to closure function.
+```js
+btn.addEventListener('click', (function(ii){ console.log(ii); })(i));
+```
+or
+```js
+(function (i) {
+  btn.addEventListener('click', function() { console.log(i); });
+})(i);
+```
+or
+```js
+['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
+  `...`
+});
+```
 
 - - -
 
