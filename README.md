@@ -394,7 +394,7 @@ for (var i = 0; i < 5; i++) {
   setTimeout(function() { console.log(i); }, i * 1000 );
 }
 ```
-Explain your answer. How could the use of closures help here?
+**Explain your answer. How could the use of closures help here?**
 
 > `#closure` `#async`
 
@@ -406,8 +406,27 @@ for (var i = 0; i < 5; i++) {
   })(i);
 }
 ```
+
 - - -
 
+💬 **What would the following lines of code output to the console?
+```js
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+```
+> `#logic`
+
+💡 Left to right process
+```js
+0 || 1 = 1  // 1 is true
+1 || 2 = 1  // 1 is true
+0 && 1 = 0  // 0 is false
+1 && 2 = 2  // 1 is true then skip and check 2 which return 2
+```
+
+- - -
 
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
