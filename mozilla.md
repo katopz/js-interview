@@ -50,3 +50,25 @@ function Engineer (mach) {
 }
 Engineer.prototype = new WorkerBee;
 ```
+####Property inheritance revisited####
+💡 Maker every inherit name "Unknow"
+```js
+function Employee () {
+  this.dept = "general";
+}
+Employee.prototype.name = "";
+
+function WorkerBee () {
+  this.projects = [];
+}
+WorkerBee.prototype = new Employee;
+
+var amy = new WorkerBee;
+
+Employee.prototype.name = "Unknown";
+```
+**Determining instance relationships**
+```js
+var f = new Foo();
+var isTrue = (f instanceof Foo);
+```
