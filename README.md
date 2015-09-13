@@ -243,6 +243,9 @@ function sum(x, y) {
   }
 }
 ```
+
+- - -
+
 💬 **Consider the following code snippet:**
 ```js
 for (var i = 0; i < 5; i++) {
@@ -276,6 +279,32 @@ or
 ['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
   ...
 });
+```
+
+- - -
+
+💬 **What will the code below output to the console and why?
+```js
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+```
+> `#array` `#referrence`
+
+💡 Here's what happen. `silce(-1)` will pick 1 item backward which is `arr3`
+```js
+var arr1 = "john".split('');    // arr1 = ["j","o","h","n"]
+var arr2 = arr1.reverse();      // arr2 = arr1 = ["n","h","o","j"]
+var arr3 = "jones".split('');   // arr3 = ["j","o","n","e","s"]
+arr2.push(arr3);                // arr2 = arr1 = ["n","h","o","j",[,"j","o","n","e","s"]]
+```
+output
+```js
+"array 1: length=5 last=j,o,n,e,s"
+"array 2: length=5 last=j,o,n,e,s"
 ```
 
 - - -
