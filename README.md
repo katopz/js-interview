@@ -682,8 +682,8 @@ global = "bar";
 💬 **What are the different JavaScript data types?**
 > `#type`
 
-💡 undefined, null, String, Number, Boolean, Object, Function
-
+💡 undefined, null, String, Number, Boolean, Symbol (new in ECMAScript 6), Object (Not primitive)
+📝 [7 data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 - - -
 
 💬 **What is the difference between a value that is undefined and a value that is null?**
