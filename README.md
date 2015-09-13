@@ -1,6 +1,6 @@
 # JavaScript Interview Questions
 
-💬 What is a potential pitfall with using `typeof bar === "object"` to determine if bar is an object? How can this pitfall be avoided? 
+💬 **What is a potential pitfall with using `typeof bar === "object"` to determine if bar is an object? How can this pitfall be avoided?** 
 > `#type` `#variable` `#null` `#undefined`
 
 💡 typeof `null` is `object`
@@ -11,7 +11,7 @@
 - - -
 - - -
 
-💬 What will the code below output to the console and why?
+💬 **What will the code below output to the console and why?**
 ```js
 (function(){
   var a = b = 3;
@@ -31,7 +31,7 @@ b defined? true
 - - -
 - - -
 
-💬 What will the code below output to the console and why?
+💬 **What will the code below output to the console and why?**
 ```js
 var myObject = {
     foo: "bar",
@@ -60,7 +60,7 @@ inner func:  self.foo = bar
 - - -
 - - -
 
-💬 What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?
+💬 **What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?**
 > `#closure` `#scope` `#this` `#self` `#function_invocation`
 
 💡 Avoid conflict from other modules and libraries e.g.
