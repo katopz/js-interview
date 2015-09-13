@@ -72,15 +72,6 @@ $.noConflict();
 jQuery(document).ready(function($){/* $ can be use */});
 ```
 
-# Template
-##### 
-```js
-
-```
-> 
-```js
-
-```
 - - -
 
 # References
