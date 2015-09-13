@@ -387,6 +387,27 @@ var x = 1;
 
 - - -
 
+💬 **What will be the output of the following code:**
+
+```js
+for (var i = 0; i < 5; i++) {
+  setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+Explain your answer. How could the use of closures help here?
+
+> `#closure` `#async`
+
+💡 Only `5` is print, Need closure to cover `setTimeout`
+```js
+for (var i = 0; i < 5; i++) {
+  (function(i){
+    setTimeout(function() { console.log(i); }, i * 1000 );
+  })(i);
+}
+```
+- - -
+
 
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
