@@ -762,6 +762,34 @@ var foo
 ```
 
 - - -
+
+📝 [JavaScript Technical Interview Questions](https://www.interviewcake.com/javascript-interview-questions)
+
+- - -
+💬 **If we execute this Javascript, what will the browser's console show?**
+```js
+  var text = 'outside';
+function logIt(){
+    console.log(text);
+    var text = 'inside';
+};
+logIt();
+```
+> `#scope`
+
+💡 It's `undefined` because what actually happen is
+```js
+var text = 'outside';
+function logIt(){
+    var text;           // undefined
+    console.log(text);
+    text = 'inside';
+};
+logIt();
+```
+
+
+- - -
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
 * http://www.skilledup.com/articles/20-must-know-javascript-interview-qa
