@@ -409,7 +409,7 @@ for (var i = 0; i < 5; i++) {
 
 - - -
 
-💬 **What would the following lines of code output to the console?
+💬 **What would the following lines of code output to the console?**
 ```js
 console.log("0 || 1 = "+(0 || 1));
 console.log("1 || 2 = "+(1 || 2));
@@ -424,6 +424,46 @@ console.log("1 && 2 = "+(1 && 2));
 1 || 2 = 1  // 1 is true
 0 && 1 = 0  // 0 is false
 1 && 2 = 2  // 1 is true then skip and check 2 which return 2
+```
+
+- - -
+
+💬 **What will be the output when the following code is executed? Explain.**
+```js
+console.log(false == '0')
+console.log(false === '0')
+```
+> `#equal`
+
+💡 `==` is compare `value`, `===` is compare both `key` and `value`
+```js
+true
+false
+```
+
+- - -
+
+💬 **What is the output out of the following code? Explain your answer.**
+```js
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+```
+> `#object`
+
+💡 `b` and `c` get convert to `[object Object]`
+```js
+a[b]=123; // `a["[object Object]"]`=123;
+a[c]=456; // `a["[object Object]"]`=456;
+```
+so output is
+```js
+456
 ```
 
 - - -
