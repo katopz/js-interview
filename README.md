@@ -86,6 +86,69 @@ jQuery(document).ready(function($){/* $ can be use */});
 
 - - -
 
+💬 **Consider the two functions below. Will they both return the same thing? Why or why not?**
+```js
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+
+console.log("foo1 : " + foo1());
+console.log("foo2 : " + foo2());
+```
+> `#pitfall`
+💡 It'll see as `return;` because `;` are optional.
+```js
+foo1 :[object Object]
+foo2 : undefined
+```
+- - -
+
+💬 **What is `NaN`? What is its type? How can you reliably test if a value is equal to `NaN`?
+
+> `#pitfall` `#Number` `#NaN`
+
+💡 Stand for `Not a Number` but beware `typeof NaN === "number"` is `true`
+```js
+// 
+isNaN(NaN);       // true
+isNaN(undefined); // true
+isNaN({});        // true
+
+isNaN(true);      // false
+isNaN(null);      // false
+isNaN(37);        // false
+
+// strings
+isNaN("37");      // false: "37" is converted to the number 37 which is not NaN
+isNaN("37.37");   // false: "37.37" is converted to the number 37.37 which is not NaN
+isNaN("");        // false: the empty string is converted to 0 which is not NaN
+isNaN(" ");       // false: a string with spaces is converted to 0 which is not NaN
+
+// dates
+isNaN(new Date());                // false
+isNaN(new Date().toString());     // true
+
+// This is a false positive and the reason why isNaN is not entirely reliable
+isNaN("blabla")   // true: "blabla" is converted to a number. 
+
+// extra point for ES6
+Number.isNaN(NaN);
+```
+ref : [isNaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Confusing_special-case_behavior)
+
+- - -
+
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
 * http://www.skilledup.com/articles/20-must-know-javascript-interview-qa
