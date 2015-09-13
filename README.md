@@ -56,6 +56,22 @@ inner func:  self.foo = bar
 
 - - -
 
+💬 What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?
+> `#closure` `#scope` `#this` `#self` `#function_invocation`
+
+💡 Avoid conflict from other modules and libraries e.g.
+```js
+// pass jQuery in as $
+(function($) { /* $ can be use */ } )(jQuery);
+```
+or with ready `#noConflict`
+```js
+// release $ from other
+$.noConflict();
+// wait for document reay and accept argument as $ and use it
+jQuery(document).ready(function($){/* $ can be use */});
+```
+
 # Template
 ##### 
 ```js
