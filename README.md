@@ -195,6 +195,21 @@ function isInteger(x) { return Math.round(x) === x; }
 2
 ```
 
+- - -
+
+💬 **Write a simple function (less than 80 characters) that returns a boolean indicating whether or not a string is a [palindrome](http://www.palindromelist.net/).**
+
+> `#algorithm`
+
+💡 Deal with it
+```js
+function isPalindrome(str) {
+    // trim non word and make it lower case
+    str = str.replace(/\W/g, '').toLowerCase();
+    // compare with reversed text
+    return (str == str.split('').reverse().join(''));
+}
+```
 
 - - -
 
