@@ -615,15 +615,10 @@ test();
 ```
 > `#scope`
 
-💡 
-```js
-undefined
-2
-```
-What actually happen is
+💡 `undefined` and `2` because what actually happen is
 ```js
 function test() {
-   var a;
+   var a;             // undefined
    function foo() {
       return 2;
    }
