@@ -331,7 +331,6 @@ NaN
 - - -
 
 💬 **The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?**
-> `#recursive` `#async`
 
 ```js
 var list = readHugeList();
@@ -345,7 +344,9 @@ var nextListItem = function() {
     }
 };
 ```
-💡 Delay call by async
+> `#recursive` `#async`
+
+💡 Delay funcation call by `setTimeout`
 ```js
 var list = readHugeList();
 
@@ -360,6 +361,32 @@ var nextListItem = function() {
 ```
 
 - - -
+
+💬 **What is a “closure” in JavaScript? Provide an example.
+> `#recursive` `#async`
+
+💡 A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain.
+```js
+var x = 1;
+(function(y) {
+    var i = "i";
+    console.log("i:" + i);
+    console.log("x:" + x);
+    console.log("y:" + y);
+    (function(z) {
+        var j = "j";
+        console.log("i:" + i);
+        console.log("j:" + j);
+        console.log("x:" + x);
+        console.log("y:" + y);
+        console.log("z:" + z);
+    })(3);
+})(2);
+
+```
+
+- - -
+
 
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
