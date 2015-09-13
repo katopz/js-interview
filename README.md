@@ -6,7 +6,14 @@ What is a potential pitfall with using `typeof bar === "object"` to determine if
 ```
 - - -
 
+# Template
+Question
+> Hint
 
+```js
+// js
+```
+- - -
 
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
