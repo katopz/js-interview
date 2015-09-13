@@ -19,12 +19,39 @@
 console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
-> `#invoke_function` `#variable` `#scope` `#use_strict`
+> `#function_invocation` `#variable` `#scope` `#use_strict`
 
 💡 `b` be defined outside of the scope of the enclosing function, try `"use strict";` to reveal error.
 ```js
 a defined? false
 b defined? true
+```
+- - -
+
+💬 What will the code below output to the console and why?
+```js
+var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        }());
+    }
+};
+myObject.func();
+```
+> `#closure` `#scope` `#this` `#self` `#function_invocation`
+
+💡 'this' is inner function which foo never defined
+```js
+outer func:  this.foo = bar
+outer func:  self.foo = bar
+inner func:  this.foo = undefined
+inner func:  self.foo = bar
 ```
 
 - - -
