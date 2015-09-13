@@ -114,7 +114,7 @@ foo2 : undefined
 ```
 - - -
 
-💬 **What is `NaN`? What is its type? How can you reliably test if a value is equal to `NaN`?
+💬 **What is `NaN`? What is its type? How can you reliably test if a value is equal to `NaN`?**
 
 > `#pitfall` `#Number` `#NaN`
 
@@ -145,7 +145,56 @@ isNaN("blabla")   // true: "blabla" is converted to a number.
 // extra point for ES6
 Number.isNaN(NaN);
 ```
-ref : [isNaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Confusing_special-case_behavior)
+📎 [isNaN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Confusing_special-case_behavior)
+
+- - -
+
+💬 **What will the code below output? Explain your answer.**
+
+```js
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+```
+
+> `#pitfall` `#Number`
+
+💡 Stand for `Not a Number` but beware `typeof NaN === "number"` is `true`
+```js
+0.30000000000000004
+false
+```
+
+- - -
+
+💬 **Discuss possible ways to write a function isInteger(x) that determines if x is an integer.**
+> `#pitfall` `#Number` `#Integer`
+
+💡 ES6 not provide `Number.isInteger()` 
+```js
+function isInteger(x) { return Math.round(x) === x; }
+```
+
+- - -
+
+💬 **In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?**
+```js
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+```
+> `#pitfall` `#async`
+
+💡 Async will do thing after inline code.
+```js
+1
+4
+3
+2
+```
+
 
 - - -
 
