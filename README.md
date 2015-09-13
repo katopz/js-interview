@@ -563,7 +563,7 @@ The arguments to the function should be:
 
 > `#DOM` `#callback` `#traverse`
 
-💡
+💡 Let's do it!
 ```js
 function Traverse(p_element, p_callback) {
    p_callback(p_element);
