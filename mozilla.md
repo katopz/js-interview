@@ -72,3 +72,36 @@ Employee.prototype.name = "Unknown";
 var f = new Foo();
 var isTrue = (f instanceof Foo);
 ```
+- - - 
+📝 [Introduction to Object-Oriented JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+- - - 
+####Terminology####
+**Namespace**
+* A container which lets developers bundle all functionality under a unique, application-specific name.
+
+**Class**
+* Defines the object's characteristics. A class is a template definition of an object's properties and methods.
+
+**Object**
+* An instance of a class.
+
+**Property**
+* An object characteristic, such as color.
+
+**Method**
+* An object capability, such as walk. It is a subroutine or function associated with a class.
+
+**Constructor**
+* A method called at the moment an object is instantiated. It usually has the same name as the class containing it.
+
+**Inheritance**
+* A class can inherit characteristics from another class.
+
+**Encapsulation**
+* A method of bundling the data and methods that use the data.
+
+**Abstraction**
+* The conjunction of an object's complex inheritance, methods, and properties must adequately reflect a reality model.
+
+**Polymorphism**
+* Poly means "many" and morphism means "forms". Different classes might define the same method or property.
