@@ -1,6 +1,6 @@
 # JavaScript Interview Questions
 
-📝 http://www.toptal.com/javascript/interview-questions
+📝 [25 Essential JavaScript Interview Questions](http://www.toptal.com/javascript/interview-questions)
 
 - - -
 
@@ -526,6 +526,8 @@ console.log(stoleSecretIdentity());
 console.log(hero.getSecretIdentity());
 ```
 
+- - -
+
 **What is the issue with this code and how can it be fixed.**
 
 > `#closure` `#function` `#call` `#bind`
@@ -549,9 +551,33 @@ console.log(stoleSecretIdentity.call(hero));
 console.log(stoleSecretIdentity.apply(hero));
 ...
 ```
-
 - - -
 
+💬 **Create a function that, given a DOM Element on the page, will visit the element itself and all of its descendents (not just its immediate children). For each element visited, the function should pass that element to a provided callback function.**
+
+The arguments to the function should be:
+
+* a DOM element
+* a callback function (that takes a DOM element as its argument)
+* 
+
+> `#DOM` `#callback` `#traverse`
+
+💡
+```js
+function Traverse(p_element, p_callback) {
+   p_callback(p_element);
+   var list = p_element.children;
+   for (var i = 0; i < list.length; i++) {
+       Traverse(list[i],p_callback);  // recursive call
+   }
+}
+```
+- - -
+
+📝 [5 Typical JavaScript Interview Exercises](http://www.sitepoint.com/5-typical-javascript-interview-exercises/)
+
+- - -
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
 * http://www.skilledup.com/articles/20-must-know-javascript-interview-qa
