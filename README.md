@@ -11,8 +11,6 @@
 - - -
 
 💬 What will the code below output to the console and why?
-> `#invoke_function` `#variable` `#scope` `#use_strict`
-
 ```js
 (function(){
   var a = b = 3;
@@ -21,6 +19,8 @@
 console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
+> `#invoke_function` `#variable` `#scope` `#use_strict`
+
 💡 `b` be defined outside of the scope of the enclosing function, try `"use strict";` to reveal error.
 ```js
 a defined? false
