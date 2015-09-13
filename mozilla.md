@@ -105,3 +105,29 @@ var isTrue = (f instanceof Foo);
 
 **Polymorphism**
 * Poly means "many" and morphism means "forms". Different classes might define the same method or property.
+ 
+####Custom objects####
+```js
+var Person = function (firstName) {
+  this.firstName = firstName;
+};
+
+Person.prototype.sayHello = function() {
+  console.log("Hello, I'm " + this.firstName);
+};
+
+var person1 = new Person("Alice");
+var person2 = new Person("Bob");
+
+// call the Person sayHello method.
+person1.sayHello(); // logs "Hello, I'm Alice"
+person2.sayHello(); // logs "Hello, I'm Bob"
+
+var helloFunction = person1.sayHello;
+// logs "Hello, I'm undefined" (or fails
+// with a TypeError in strict mode)
+helloFunction();     
+
+// logs "Hello, I'm Alice"
+helloFunction.call(person1);
+```
