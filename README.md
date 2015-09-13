@@ -717,10 +717,54 @@ var foo
 📎 [DOM](http://www.w3schools.com/js/js_htmldom.asp)
 
 - - -
+
+📝 [JavaScript interview questions and answers](http://www.techrepublic.com/blog/software-engineer/javascript-interview-questions-and-answers/)
+
+- - -
+
+💬 **What is event bubbling?**
+> `#overview` `#event`
+
+💡 Event bubbling describes the behavior of events in child and parent nodes in the Document Object Model (DOM)
+
+- - -
+
+📝 [20 Must Know JavaScript Interview Q&As](http://www.skilledup.com/articles/20-must-know-javascript-interview-qa)
+
+- - -
+
+💬 **What is the  difference between `window.onload` and the jQuery `$(document).ready()` method?
+> `#overview` `#event`
+
+💡 
+* The `window.onload method` occurs after all the page elements have loaded(HTML, CSS, images), which can result in a delay.
+* The `$(document).ready()` method begins to run code as soon as the Document Object Model (DOM) is loaded, which should be faster and less prone to loading errors across different browsers.
+
+- - -
+
+📝 [Functional JavaScript interview question](http://bahmutov.calepin.co/functional-javascript-interview-question.html)
+
+- - -
+💬 **Fix this**
+```js
+['1', '2', '3'].map(parseFloat);
+  //=> [1, 2, 3]
+['1', '2', '3'].map(parseInt);
+  //=> [ 1, NaN, NaN ]
+```
+> `#functional`
+
+💡 It's failed because [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt] function (takes string and radix), need to cover function.
+```js
+['1', '2', '3'].map(function (str) {
+  return parseInt(str);
+});
+```
+
+- - -
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
 * http://www.skilledup.com/articles/20-must-know-javascript-interview-qa
-* http://www.techrepublic.com/blog/software-engineer/javascript-interview-questions-and-answers/
 * https://www.interviewcake.com/javascript-interview-questions
 * https://blog.udemy.com/javascript-interview-questions/
 * http://www.toptal.com/javascript/interview-questions
