@@ -9,6 +9,7 @@
 ```
 
 - - -
+- - -
 
 💬 What will the code below output to the console and why?
 ```js
@@ -26,6 +27,8 @@ console.log("b defined? " + (typeof b !== 'undefined'));
 a defined? false
 b defined? true
 ```
+
+- - -
 - - -
 
 💬 What will the code below output to the console and why?
@@ -55,6 +58,7 @@ inner func:  self.foo = bar
 ```
 
 - - -
+- - -
 
 💬 What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?
 > `#closure` `#scope` `#this` `#self` `#function_invocation`
@@ -72,6 +76,7 @@ $.noConflict();
 jQuery(document).ready(function($){/* $ can be use */});
 ```
 
+- - -
 - - -
 
 # References
