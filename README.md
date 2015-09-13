@@ -5,7 +5,7 @@
 - - -
 
 💬 **What is a potential pitfall with using `typeof bar === "object"` to determine if bar is an object? How can this pitfall be avoided?** 
-> `#type` `#variable` `#null` `#undefined`
+> `#scope` `#type` `#variable` `#null` `#undefined`
 
 💡 typeof `null` is `object`
 ```js
@@ -576,6 +576,27 @@ function Traverse(p_element, p_callback) {
 - - -
 
 📝 [5 Typical JavaScript Interview Exercises](http://www.sitepoint.com/5-typical-javascript-interview-exercises/)
+
+- - -
+
+💬 **Define a repeatify function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
+```js
+console.log('hello'.repeatify(3)); // Should print hellohellohello.
+```
+> `#method` `#inherit` `#prototype`
+
+💡 Define `repeatify` from `String.prototype`
+```js
+String.prototype.repeatify = String.prototype.repeatify || function(times) {
+   var str = '';
+
+   for (var i = 0; i < times; i++) {
+      str += this;
+   }
+
+   return str;
+};
+```
 
 - - -
 # References
