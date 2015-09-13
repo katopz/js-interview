@@ -599,6 +599,122 @@ String.prototype.repeatify = String.prototype.repeatify || function(times) {
 ```
 
 - - -
+
+💬 **What’s the result of executing this code and why.**
+```js
+function test() {
+   console.log(a);
+   console.log(foo());
+   
+   var a = 1;
+   function foo() {
+      return 2;
+   }
+}
+test();
+```
+> `#scope`
+
+💡 
+```js
+undefined
+2
+```
+What actually happen is
+```js
+function test() {
+   var a;
+   function foo() {
+      return 2;
+   }
+
+   console.log(a);
+   console.log(foo());
+   
+   a = 1;
+}
+
+test();
+```
+- - -
+
+📝 [https://blog.udemy.com/javascript-interview-questions/](JavaScript Interview Questions: A Not-So-Brief Overview To Help You Prepare)
+
+- - -
+
+💬 **What is JavaScript?**
+> `#overview`
+
+💡 JavaScript is a prototype-based, interpreted scripting language used in client-side web development to add interactivity to browser-based pages.
+
+- - -
+
+💬 **How do you add JavaScript to a web page?**
+> `#overview`
+
+💡 In `<head></head>` and `<body></body>`
+```html
+<head><script type="text/javascript" src="foo.js"></script>/head>
+<body><script type="text/javascript">alert(foo);</script></body>
+```
+- - -
+
+💬 **How do you add comments in JavaScript?
+> `#overview`
+
+💡 There are two ways to add comments in JavaScript, as line comments and block comments.
+```js
+// one line
+/* 
+multi line
+multi line
+*/
+```
+- - -
+
+💬 **Explain the difference between a local and a global variable, and how to declare each one.**
+> `#overview` `#variable`
+
+💡 Global variable can acces every where, Local variable can be use on in their scope
+```js
+// local
+var _local = "foo";
+global = "bar";
+```
+
+- - -
+
+💬 **What are the different JavaScript data types?**
+> `#type`
+
+💡 undefined, null, String, Number, Boolean, Object, Function
+
+- - -
+
+💬 **What is the difference between a value that is undefined and a value that is null?**
+> `#undefined` `#null`
+
+💡 A variable is undefined when it’s been declared without an assigned value.
+```js
+var foo
+```
+- - -
+
+💬 **Explain the `this` keyword in JavaScript.**
+> `#overview` `#this`
+
+💡`this` used to reference the object in which the function is operating.
+
+- - -
+
+💬 **What is the HTML DOM?**
+> `#overview`
+
+💡 Once a web page loads, your browser generates something called a DOM, or Document Object Model, of the page. The DOM acts as as programming interface for HTML, which defines HTML properties, events, and methods. It also refers to HTML elements as objects.
+![image](https://cloud.githubusercontent.com/assets/97060/9836599/e7b78410-5a49-11e5-8bee-fe58f4fac6a7.png)
+📎 [DOM](http://www.w3schools.com/js/js_htmldom.asp)
+
+- - -
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
 * http://www.skilledup.com/articles/20-must-know-javascript-interview-qa
