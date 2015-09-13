@@ -366,7 +366,7 @@ var nextListItem = function() {
 
 - - -
 
-💬 **What is a “closure” in JavaScript? Provide an example.
+💬 **What is a “closure” in JavaScript? Provide an example.**
 > `#recursive` `#async`
 
 💡 A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain.
@@ -659,7 +659,7 @@ test();
 ```
 - - -
 
-💬 **How do you add comments in JavaScript?
+💬 **How do you add comments in JavaScript?**
 > `#overview`
 
 💡 There are two ways to add comments in JavaScript, as line comments and block comments.
@@ -711,7 +711,9 @@ var foo
 > `#overview`
 
 💡 Once a web page loads, your browser generates something called a DOM, or Document Object Model, of the page. The DOM acts as as programming interface for HTML, which defines HTML properties, events, and methods. It also refers to HTML elements as objects.
+
 ![image](https://cloud.githubusercontent.com/assets/97060/9836599/e7b78410-5a49-11e5-8bee-fe58f4fac6a7.png)
+
 📎 [DOM](http://www.w3schools.com/js/js_htmldom.asp)
 
 - - -
