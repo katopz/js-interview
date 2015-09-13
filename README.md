@@ -306,7 +306,29 @@ output
 array 1: length=5 last=j,o,n,e,s
 array 2: length=5 last=j,o,n,e,s
 ```
+- - -
 
+💬 **What will the code below output to the console and why ?**
+```js
+console.log(1 +  "2" + "2");
+console.log(1 +  +"2" + "2");
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+```
+> `#String` `#Number``#operation`
+
+💡 Rules : `1 +  "2" = "12"` and �  `-"1" = -1`also last one will judge type
+```
+122
+32
+02
+112
+NaN2
+NaN
+
+```
 - - -
 
 # References
