@@ -7,6 +7,7 @@
 ```js
 (bar !== null) && (typeof bar === "object")
 ```
+
 - - -
 
 ##### What will the code below output to the console and why?
