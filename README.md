@@ -1,6 +1,6 @@
 # JavaScript Interview Questions
 
-##### What is a potential pitfall with using `typeof bar === "object"` to determine if bar is an object? How can this pitfall be avoided?
+What is a potential pitfall with using `typeof bar === "object"` to determine if bar is an object? How can this pitfall be avoided?
 `#type` `#variable`
 
 > typeof `null` is `object`
@@ -10,7 +10,7 @@
 
 - - -
 
-##### What will the code below output to the console and why?
+What will the code below output to the console and why?
 `#invoke_function` `#variable` `#scope` `#use_strict`
 ```js
 (function(){
