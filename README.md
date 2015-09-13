@@ -260,7 +260,7 @@ for (var i = 0; i < 5; i++) {
 💡 `i` is `5` forever, need input i to closure function.
 ```js
 ...
-btn.addEventListener('click', (function(ii){ console.log(ii); })(i));
+btn.addEventListener('click', (function(i){ console.log(i); })(i));
 ...
 ```
 or
