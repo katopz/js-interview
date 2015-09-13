@@ -216,6 +216,37 @@ console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
 
 - - -
 
+💬 **Write a `sum` method which will work properly when invoked using either syntax below.
+```js
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+> `#algorithm` `#arguments` `#functional`
+
+💡 Deal with it
+```js
+function sum(x) {
+  if (arguments.length == 2) {
+    return arguments[0] + arguments[1];
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+```
+or
+```js
+function sum(x, y) {
+  if (y !== undefined) {
+    return x + y;
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+```
+
+
+- - -
+
 # References
 * http://bahmutov.calepin.co/functional-javascript-interview-question.html
 * http://www.skilledup.com/articles/20-must-know-javascript-interview-qa
