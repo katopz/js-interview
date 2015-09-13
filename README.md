@@ -283,7 +283,7 @@ or
 
 - - -
 
-💬 **What will the code below output to the console and why?
+💬 **What will the code below output to the console and why?**
 ```js
 var arr1 = "john".split('');
 var arr2 = arr1.reverse();
@@ -319,16 +319,46 @@ console.log( "A" - "B" + 2);
 ```
 > `#String` `#Number``#operation`
 
-💡 Rules : `1 +  "2" = "12"` and �  `-"1" = -1`also last one will judge type
-```
+💡 Rules : `1 +  "2" = "12"` and `-"1" = -1` also last one will judge type
+```js
 122
 32
 02
 112
 NaN2
 NaN
-
 ```
+- - -
+
+💬 **The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?**
+> `#recursive` `#async`
+
+```js
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        nextListItem();
+    }
+};
+```
+💡 Delay call by async
+```js
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        setTimeout( nextListItem, 0);
+    }
+};
+```
+
 - - -
 
 # References
