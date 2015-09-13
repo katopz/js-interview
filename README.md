@@ -1,5 +1,9 @@
 # JavaScript Interview Questions
 
+📝 http://www.toptal.com/javascript/interview-questions
+
+- - -
+
 💬 **What is a potential pitfall with using `typeof bar === "object"` to determine if bar is an object? How can this pitfall be avoided?** 
 > `#type` `#variable` `#null` `#undefined`
 
@@ -486,7 +490,64 @@ f(7): returns 7 * f(6), which is 5040
 f(8): returns 8 * f(7), which is 40320
 f(9): returns 9 * f(8), which is 362880
 f(10): returns 10 * f(9), which is 3628800
+```
 
+- - -
+
+💬 **Consider the code snippet below. What will the console output be and why?**
+```js
+(function(x) {
+    return (function(y) {
+        console.log(x);
+    })(2)
+})(1);
+```
+> `#closure`
+
+💡 Inner function still has access to the outer function’s variables.
+```
+1
+```
+
+- - -
+
+💬 **What will the following code output to the console and why:**
+```js
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function (){
+        return this._name;
+    }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;
+
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+```
+
+**What is the issue with this code and how can it be fixed.**
+
+> `#closure` `#function` `#call` `#bind`
+
+💡 Stole `function` will miss their scope.
+output
+```js
+undefined
+John Doe
+```
+Use `bind` to fix.
+```js
+...
+var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);
+...
+```
+Or temporary fix by `call` or `apply` each function with scope.
+```js
+...
+console.log(stoleSecretIdentity.call(hero));
+console.log(stoleSecretIdentity.apply(hero));
+...
 ```
 
 - - -
