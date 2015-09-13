@@ -303,8 +303,8 @@ arr2.push(arr3);                // arr2 = arr1 = ["n","h","o","j",[,"j","o","n",
 ```
 output
 ```js
-"array 1: length=5 last=j,o,n,e,s"
-"array 2: length=5 last=j,o,n,e,s"
+array 1: length=5 last=j,o,n,e,s
+array 2: length=5 last=j,o,n,e,s
 ```
 
 - - -
