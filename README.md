@@ -543,7 +543,6 @@ The arguments to the function should be:
 
 * a DOM element
 * a callback function (that takes a DOM element as its argument)
-* 
 
 > `#DOM` `#callback` `#traverse`
 
