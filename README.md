@@ -512,9 +512,6 @@ var stoleSecretIdentity = hero.getSecretIdentity;
 console.log(stoleSecretIdentity());
 console.log(hero.getSecretIdentity());
 ```
-
-- - -
-
 **What is the issue with this code and how can it be fixed.**
 
 > `#closure` `#function` `#call` `#bind`
