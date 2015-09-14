@@ -449,8 +449,8 @@ console.log(a[b]);
 
 💡 `b` and `c` get convert to `[object Object]`
 ```js
-a[b]=123; // `a["[object Object]"]`=123;
-a[c]=456; // `a["[object Object]"]`=456;
+a[b]=123; // a["[object Object]"]=123;
+a[c]=456; // a["[object Object]"]=456;
 ```
 so output is
 ```js
