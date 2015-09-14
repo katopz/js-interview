@@ -732,7 +732,7 @@ var foo
 ```
 > `#functional`
 
-💡 It's failed because [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt] function (takes string and radix), need to cover function.
+💡 It's failed because [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt] function (takes string and radix)) , need to cover function.
 ```js
 ['1', '2', '3'].map(function (str) {
   return parseInt(str);
