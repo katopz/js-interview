@@ -267,24 +267,11 @@ for (var i = 0; i < 5; i++) {
 💡 `i` is `5` forever, need input i to closure function.
 ```js
 ...
-btn.addEventListener('click', (function(i){ console.log(i); })(i));
-...
-```
-or
-```js
-...
 (function (i) {
   btn.addEventListener('click', function() { console.log(i); });
 })(i);
 ...
 ```
-or
-```js
-['a', 'b', 'c', 'd', 'e'].forEach(function (value, i) {
-  ...
-});
-```
-
 - - -
 
 💬 **What will the code below output to the console and why?**
